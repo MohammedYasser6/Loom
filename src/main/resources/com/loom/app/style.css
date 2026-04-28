@@ -1,0 +1,238 @@
+/* The Main App Background (Discord Center Area) */
+.root {
+    -fx-background-color: #313338;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* The Header (Discord Top Bar) */
+.header-bar {
+    -fx-background-color: #1e1f22;
+    -fx-padding: 10 20 10 20;
+    -fx-border-color: #1e1f22;
+    -fx-border-width: 0 0 1 0; /* A tiny shadow/border on the bottom */
+}
+
+/* The Sidebar (Discord Channel List) */
+.sidebar {
+    -fx-background-color: #2b2d31;
+    -fx-padding: 15;
+}
+
+/* Global Text Colors */
+.label {
+    -fx-text-fill: #dbdee1;
+}
+
+/* The Header Logo/Title */
+.logo-text {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Discord Style Buttons */
+.button {
+    -fx-background-color: #5865F2; /* Discord Blurple */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 4; /* Rounded corners */
+    -fx-cursor: hand;
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    -fx-background-color: #4752C4;
+}
+
+/* The Host Button (Discord Green) */
+.host-button {
+    -fx-background-color: #23a559;
+}
+
+.host-button:hover {
+    -fx-background-color: #1da251;
+}
+
+/* Disabled button state (when hosting) */
+.host-button:disabled {
+    -fx-background-color: #1f4a2c;
+    -fx-text-fill: #80848e;
+}
+
+/* --- Kanban Board Styles --- */
+
+/* The columns holding the tasks */
+.kanban-column {
+    -fx-background-color: #2b2d31; /* Same as the sidebar */
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+    -fx-pref-width: 280; /* Fixed width for columns */
+}
+
+/* The title at the top of each column */
+.kanban-header {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 10 0; /* Padding at the bottom to separate from cards */
+}
+
+/* The actual task cards */
+.task-card {
+    -fx-background-color: #1e1f22; /* Darker background to pop out from the column */
+    -fx-background-radius: 6;
+    -fx-padding: 12;
+    -fx-border-color: #3f4147; /* Subtle border */
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+}
+
+/* Hover effect so users know the card is interactive */
+.task-card:hover {
+    -fx-border-color: #5865F2; /* Highlights with Discord Blurple */
+}
+
+/* Task card text */
+.task-title {
+    -fx-text-fill: #dbdee1;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-wrap-text: true; /* Allows long text to go to the next line */
+}
+
+/* --- Chat UI Styles --- */
+.chat-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent; /* Removes the ugly default grey background */
+}
+
+.chat-scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.chat-input {
+    -fx-background-color: #383a40; /* The deep Discord chat-box grey */
+    -fx-text-fill: #dbdee1;
+    -fx-prompt-text-fill: #80848e;
+    -fx-background-radius: 8;
+    -fx-padding: 10 15 10 15;
+    -fx-font-size: 14px;
+    -fx-border-width: 0;
+}
+
+.chat-input:focused {
+    -fx-background-color: #404249; /* Slightly lighter when typing */
+}
+
+.chat-message {
+    -fx-text-fill: #dbdee1;
+    -fx-font-size: 13px;
+    -fx-padding: 4 0 4 0;
+}
+
+/* --- Home Page Styles --- */
+.home-container {
+    -fx-background-color: #313338;
+    -fx-alignment: center;
+}
+
+.home-card {
+    -fx-background-color: #2b2d31;
+    -fx-padding: 40;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 15, 0, 0, 8);
+    -fx-alignment: center;
+}
+
+.home-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.home-subtitle {
+    -fx-text-fill: #949ba4;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 20 0;
+}
+
+.home-input {
+    -fx-background-color: #1e1f22;
+    -fx-text-fill: #dbdee1;
+    -fx-prompt-text-fill: #80848e;
+    -fx-background-radius: 4;
+    -fx-padding: 12;
+    -fx-font-size: 14px;
+    -fx-pref-width: 250;
+}
+
+.home-input:focused {
+    -fx-border-color: #5865F2;
+    -fx-border-radius: 4;
+}
+
+/* Secondary button for joining */
+.join-button {
+    -fx-background-color: #4e5058;
+}
+
+.join-button:hover {
+    -fx-background-color: #6d6f78;
+}
+
+/* --- FIX: The SplitPane Divider (Resizable Chat) --- */
+.main-split {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+.main-split *.split-pane-divider {
+    -fx-background-color: #1e1f22; /* Sleek dark divider line */
+    -fx-padding: 0 1 0 1;
+}
+/* --- The Standard Inputs --- */
+.chat-input {
+    -fx-background-color: #383a40;
+    -fx-text-fill: #dbdee1;
+    -fx-prompt-text-fill: #80848e;
+    -fx-background-radius: 8;
+    -fx-padding: 10 15 10 15;
+    -fx-font-size: 14px;
+    -fx-border-width: 0;
+
+    /* THE FIX: This instantly kills the default JavaFX blue focus ring that makes it grow */
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.chat-input:focused {
+    -fx-background-color: #404249; /* Smooth highlight, no size change! */
+}
+
+/* --- FIX: Task Input Box (TextArea) Dark Theme --- */
+.text-area {
+    -fx-background-color: transparent;
+    -fx-text-fill: #dbdee1;
+
+    /* THE FIX: Strips the outer padding so the box doesn't fight the inner content */
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.text-area .content {
+    -fx-background-color: #383a40;
+    -fx-background-radius: 8; /* Locks the radius perfectly to the outer box */
+    -fx-padding: 10 15 10 15; /* Puts the comfortable spacing inside the radius */
+}
+
+.text-area:focused .content {
+    -fx-background-color: #404249;
+}
+
+.text-area .scroll-pane,
+.text-area .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
